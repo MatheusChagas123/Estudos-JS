@@ -13,17 +13,17 @@
 
  <main>
 
-  <div class="screen1 hide">
+  <div class="screen1">
     <h1>Jogo da Adivinhação</h1>
     <p>Adivinhe um número de 0 a 10</p>
-    <form action="">
-      <input type="number">
-      <button>Tentar</button>
+    <form >
+      <input id="inputNumber" type="number">
+      <button onclick="handleClick(event)" >Tentar</button>
     </form>
   </div>
-  <div class="screen2">
-    <h2> acertou em 3 tentativas</h2>
-    <button>Jogar novamente</button>
+  <div class="screen2 hide">
+   
+    <button onclick="attPage(event)"> Tente novamente</button>
   </div>
   </main>
 
@@ -31,6 +31,6 @@
   
   
   
-  <script src="script.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>
