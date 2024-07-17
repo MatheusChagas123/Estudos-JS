@@ -59,7 +59,7 @@ function calculate() {
       resultValue = firstOperand < secondOperand ? firstOperand: secondOperand;
       break;
 
-      case "Resultado impar ou par":
+      case "Resultado ímpar ou par":
         resultValue = firstOperand % 2 === 0 ? "Par" : "Ímpar";
         break;
 
