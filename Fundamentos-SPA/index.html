@@ -10,46 +10,11 @@
     <a href="/" onclick="route()">home</a>
     <a href="/about"onclick="route()">Sobre</a>
     <a href="/contact" onclick="route()"">Contato</a>
-    <a href="/404" onclick="route()"">404</a>
+    
   </nav>
   <div id="app"></div>
 
-  Construção da base de rotas de um app.
-  como funciona: 
-  <!-- primeiro passo: crie uma rota com todas as pastes e seus nomes e essa rota se chamará routes. é importante que os nomes das rotas sejam o mesmo nome das pasta para facilitar as correções. exemplo linha 25 até 29
-
-  segundo crie uma função rota onde ela vai capturar o nome da rota na função rotas exemplo linha 32 a 38
-
-  por ultimo crie a função hundle que é a que usa a as funções rota e rotas para mostrar a página linhas 37 a 45  -->
-  <script>
-    const routes ={
-      "/": "/pages/home.html",
-      "/about": "/pages/about.html",
-      "/contact": "/pages/contact.html",
-      404:"/pages/404.html"
-    }
-
-    function route(event) {  
-      event=event || window.event 
-      event.preventDefault()
-      window.history.pushState({},"",event.target.href)
-
-      handle()
-    }
-    function handle(){
-      const {pathname}= window.location
-      const route = routes[pathname] || routes[404];
-      fetch(route).then( data => data.text())
-      .then( html=> 
-        document. querySelector("#app").innerHTML=html
-      )
-      
-    }
-
-    handle()
-
-    window.onpopstate = () => handle()
-  </script>
+  <script type="module" src="/src/index.js"></script>
  
 </body>
 </html>
