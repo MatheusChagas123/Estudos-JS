@@ -24,7 +24,7 @@ body * {
   font-family: var(--ff-primary);
 }
 
-
+/* deixar elementos desaparecidos no front, porém com acessibilidade para cegos */
 .sr-only {
   position: absolute;
   width: 1px;
